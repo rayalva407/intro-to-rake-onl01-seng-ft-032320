@@ -8,6 +8,11 @@ namespace :greeting do
   task :hola do
     puts "hola de Rake!"
   end
+  
+  task :environment do
+    require_relative './config/environment'
+  end
+  
   desc 'drop into the pry console'
   task :console => :environment do
     Pry.start
