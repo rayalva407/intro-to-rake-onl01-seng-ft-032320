@@ -12,10 +12,9 @@ namespace :greeting do
   task :hola do
     puts "hola de Rake!"
   end
-  
-  desc 'drop into the pry console'
-  task :console => :environment do
-    Pry.start
-  end
 end
 
+desc 'drop into the pry console'
+task :console => :environment do
+  Pry.start
+end
